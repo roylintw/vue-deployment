@@ -1,7 +1,7 @@
 FROM node:latest as build-stage
 RUN npm install -g http-server
 RUN npm install -g vite
-RUN npm install @fortawesome/fontawesome-svg-core
+RUN npm install -g @fortawesome/fontawesome-svg-core
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
