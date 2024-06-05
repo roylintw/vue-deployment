@@ -72,6 +72,7 @@ async function login(){
     }, {
       headers: {
         'Authorization': `Basic ${btoa(`${username}:${password}`)}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
     });
     console.log('Login successful', response);
