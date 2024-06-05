@@ -7,7 +7,7 @@ import HelloButton from './components/HelloButton.vue';
 <template>
   <header>
     <div>
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
     <div class="wrapper">
       <HelloWorld msg="這是一個 Vue 專案!" />
       <HelloButton />
@@ -16,7 +16,7 @@ import HelloButton from './components/HelloButton.vue';
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
-    </div> -->
+    </div>
     <RouterView />
   </div>
   </header>
