@@ -16,6 +16,8 @@ export default defineConfig({
     }
   },
   server: {
+    port: 5173,
+    host: '0.0.0.0',
     proxy: {
       // 將所有以 /api 開頭的請求轉發到後端服務器
       '/api': {
