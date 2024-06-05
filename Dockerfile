@@ -7,6 +7,8 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # 如果有静态文件需要提供服务，复制到适当的位置
 COPY index.html /usr/share/nginx/index.html
 
+EXPOSE 80
+
 FROM node:latest as build-stage
 RUN rm -rf node_modules
 RUN npm install -g http-server
