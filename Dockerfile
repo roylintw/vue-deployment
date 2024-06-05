@@ -5,10 +5,7 @@ FROM nginx:latest
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # 如果有静态文件需要提供服务，复制到适当的位置
-COPY html /usr/share/nginx/html
-
-# 暴露 Nginx 默认端口
-EXPOSE 80
+COPY index.html /usr/share/nginx/index.html
 
 FROM node:latest as build-stage
 RUN rm -rf node_modules
