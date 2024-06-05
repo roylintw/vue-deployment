@@ -1,3 +1,15 @@
+# 使用官方的 Nginx 基础镜像
+FROM nginx:latest
+
+# 复制自定义的 Nginx 配置文件到容器中的 /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# 如果有静态文件需要提供服务，复制到适当的位置
+COPY html /usr/share/nginx/html
+
+# 暴露 Nginx 默认端口
+EXPOSE 80
+
 FROM node:latest as build-stage
 RUN rm -rf node_modules
 RUN npm install -g http-server
