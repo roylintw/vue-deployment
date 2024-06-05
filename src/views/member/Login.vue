@@ -15,6 +15,7 @@
         </div>
         <button class="btn" type="submit">登入</button>
       </form>
+      <div v-if="errorMessage" class="error-message">{{ errorMessage }}</div>
     </div>
   </div>
 </template>
@@ -55,16 +56,17 @@ export default defineComponent({
 <!-- 組合式API --> 
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
-import axios from 'axios';
+import axios, {AxiosError} from 'axios';
 import { useRouter } from 'vue-router';
 let username: ''
 let password: ''
+const errorMessage = ref('');
 const router = useRouter()
 const isActive = ref(false);
 
-function login() {
+async function login(){
   try {
-    const response = axios.post('/api/hello', {
+    const response = await axios.post('/api/memberLogin', {
       username: username,
       password: password,
     }, {
@@ -77,6 +79,10 @@ function login() {
     router.push('/');
   } catch (error) {
     console.error('Error logging in', error);
+    if (error instanceof AxiosError) {
+    console.error('status', Object(error).response.status);
+  }
+    
   }
 }
 
