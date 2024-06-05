@@ -4,8 +4,7 @@ import Login from '../views/member/Login.vue'
 import Register from '../views/member/Register.vue'
 
 const router = createRouter({
-  // history: createWebHistory(import.meta.env.BASE_URL),
-  history: createWebHistory("test"),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
