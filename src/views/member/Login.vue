@@ -65,6 +65,7 @@ const router = useRouter()
 const isActive = ref(false);
 
 async function login(){
+  console.log('login')
   // const helloResponse = axios.get('/api/');
   // console.log('helloResponse: ', (await helloResponse).data);
   try {
