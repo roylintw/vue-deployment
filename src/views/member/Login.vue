@@ -66,16 +66,17 @@ const isActive = ref(false);
 
 async function login(){
   try {
-    const response = await axios.post('/api/memberLogin', {
-      username: username,
-      password: password,
-    }, {
-      headers: {
-        'Authorization': `Basic ${btoa(`${username}:${password}`)}`,
-        'Content-Type': 'application/x-www-form-urlencoded;charset-utf-8',
-        // 'Content-Type': 'multipart/form-data',
-      },
-    });
+    const response = await axios.get('/api/')
+    // const response = await axios.post('/api/memberLogin', {
+    //   username: username,
+    //   password: password,
+    // }, {
+    //   headers: {
+    //     'Authorization': `Basic ${btoa(`${username}:${password}`)}`,
+    //     'Content-Type': 'application/x-www-form-urlencoded;charset-utf-8',
+    //     // 'Content-Type': 'multipart/form-data',
+    //   },
+    // });
     console.log('Login successful', response);
     // 跳轉到首頁
     router.push('/');
