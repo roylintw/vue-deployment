@@ -5,7 +5,7 @@
       <div class="header">登入</div>
       <form @submit.prevent="login">
       <div class="form-wrapper">
-        <label for="username">帳號1:</label>
+        <label for="username">帳號:</label>
         <input type="text" class="input-item" v-model="username" placeholder="請輸入帳號/信箱/用戶名" required />
       </div>
         <div>
