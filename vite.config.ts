@@ -22,7 +22,7 @@ export default defineConfig({
       // 將所有以 /api 開頭的請求轉發到後端服務器
       '/api': {
         // target: 'http://localhost:8080',
-        target: 'https://spring-boot-deployment-1-xpf6zdjama-de.a.run.app',
+        target: 'https://spring-boot-deployment-1-xpf6zdjama-de.a.run.app:8080',
         changeOrigin: true,
         secure: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
