@@ -66,7 +66,7 @@ const isActive = ref(false);
 
 async function login(){
   try {
-    const response = await axios.post('/api/memberLogin', {
+    const response = await axios.post('/api/memberLogin/', {
       username: username,
       password: password,
     }, {
