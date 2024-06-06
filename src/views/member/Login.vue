@@ -76,7 +76,7 @@ async function login(){
       headers: {
         'Authorization': `Basic ${btoa(`${username}:${password}`)}`,
         // 'Content-Type': 'application/json'
-        'Content-Type': 'application/x-www-form-urlencoded;charset-utf-8',
+        // 'Content-Type': 'application/x-www-form-urlencoded;charset-utf-8',
         // 'Content-Type': 'multipart/form-data',
       },
     });
