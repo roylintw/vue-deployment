@@ -6,6 +6,7 @@ import alias from '@rollup/plugin-alias'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
     vue(),
     alias(),
