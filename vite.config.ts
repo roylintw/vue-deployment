@@ -7,6 +7,7 @@ import alias from '@rollup/plugin-alias'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
+  appType: 'spa',
   plugins: [
     vue(),
     alias(),
