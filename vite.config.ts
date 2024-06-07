@@ -6,6 +6,7 @@ import alias from '@rollup/plugin-alias'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "./",
   plugins: [
     vue(),
     alias(),
@@ -23,7 +24,7 @@ export default defineConfig({
       '/api': {
         // before
         // target: 'http://localhost:8080',
-        
+
         // after
         target: 'https://spring-boot-deployment-1-xpf6zdjama-de.a.run.app',
         changeOrigin: true,
