@@ -25,7 +25,7 @@ export default defineConfig({
         target: 'https://spring-boot-deployment-1-xpf6zdjama-de.a.run.app',
         changeOrigin: true,
         secure: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        // rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   }
