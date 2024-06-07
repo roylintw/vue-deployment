@@ -70,8 +70,8 @@ async function login() {
   // const helloResponse = axios.get('/api/');
   // console.log('helloResponse: ', (await helloResponse).data);
   try {
-    const response = await axios.post('/api/memberLogin', {
-    // const response = await axios.post('https://spring-boot-deployment-1-xpf6zdjama-de.a.run.app/memberLogin', {
+    // const response = await axios.post('/api/memberLogin', {
+    const response = await axios.post('https://spring-boot-deployment-1-xpf6zdjama-de.a.run.app/memberLogin', {
       username: username,
       password: password,
     }, {
